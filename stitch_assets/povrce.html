@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="sr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zamrznuto povrće - The Cryogenic Editorial</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#a7d555",
+                        "on-primary-fixed-variant": "#354570",
+                        "on-tertiary-fixed-variant": "#314e2a",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#6d8c63",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "inverse-primary": "#b5c5f8",
+                        "outline": "#75777f",
+                        "outline-variant": "#c5c6d0",
+                        "inverse-surface": "#1e2f58",
+                        "on-surface": "#051942",
+                        "primary": "#000000",
+                        "secondary-fixed": "#c2f26e",
+                        "surface": "#faf8ff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-primary-container": "#7283b1",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed-dim": "#b5c5f8",
+                        "on-surface-variant": "#45464e",
+                        "surface-tint": "#4d5d89",
+                        "tertiary": "#000000",
+                        "surface-container-highest": "#dae2ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "on-tertiary-fixed": "#062104",
+                        "on-primary": "#ffffff",
+                        "secondary": "#486800",
+                        "on-secondary-container": "#4b6d00",
+                        "surface-container": "#eaedff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#caecbc",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#bfef6b",
+                        "surface-dim": "#ced9ff",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-primary-fixed": "#051942",
+                        "background": "#faf8ff",
+                        "surface-variant": "#dae2ff",
+                        "tertiary-container": "#062104",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#354e00",
+                        "tertiary-fixed-dim": "#aed0a1",
+                        "primary-container": "#051942",
+                        "on-secondary-fixed": "#131f00",
+                        "on-background": "#051942",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen flex flex-col pt-24">
+<!-- TopNavBar from JSON -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-slate-900/60 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(5,25,66,0.04)] text-blue-950 dark:text-blue-50 font-['Plus_Jakarta_Sans'] font-medium tracking-tight text-sm flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-extrabold tracking-tighter text-blue-950 dark:text-white uppercase hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">
+            The Cryogenic Editorial
+        </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">O nama</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Zamrznuto voće</a>
+<a aria-current="page" class="text-blue-900 dark:text-blue-200 font-bold border-b-2 border-blue-900 dark:border-blue-400 pb-1 hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Zamrznuto povrće</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Rinfuzno voće i povrće</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Kontakt</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] min-h-[500px] flex items-center justify-center bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 w-full h-full">
+<img alt="Frozen vegetables background" class="w-full h-full object-cover" data-alt="close up of premium frozen green peas with delicate frost crystals scattered across a dark slate surface under dramatic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvTeowXrDW06j_g3zu7DQQoqRk7uP4-yhIboK7Zlxl0qInc2q3icO2mka0sf_lfDQmvbuQlahoaSCOJBXI3GR70Tl-1JifxisMVhNh3zBlodeB81U8icwZqn4mK25jPzd8zuEXrAwPC6EkVq7HMJV956vJdITcUbByNEsTFjBkgeQtNVku-bk86EG6Rw3NbrzXqBYCzkDzrPsoqOBA57jqfGYKkcEo_ur6z4d3nTXpGjSWka2j3n2P7ocqhCy5eK7AQlcWNTQlJ44"/>
+</div>
+<!-- Frost Overlay Component -->
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<div class="bg-surface-container-lowest/40 backdrop-blur-xl p-12 md:p-20 rounded-xl text-center max-w-4xl w-full border border-outline-variant/15 shadow-[0_20px_40px_rgba(5,25,66,0.06)]">
+<p class="font-label text-sm uppercase tracking-widest text-on-surface-variant mb-4">Katalog Proizvoda</p>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-[-0.02em] leading-tight mb-6">Zamrznuto povrće</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">Vrhunski kvalitet povrća sačuvan u trenutku savršene zrelosti. Naša selekcija nudi hrskavost i nutritivnu vrednost pravo iz prirode u vašu kuhinju.</p>
+</div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2">Naša Selekcija</h2>
+<p class="font-body text-on-surface-variant">Istražite paletu smrznutog povrća, pažljivo biranog za restorane i hotele.</p>
+</div>
+<!-- Category Chips -->
+<div class="flex flex-wrap gap-3">
+<button class="bg-secondary-container text-on-surface font-label text-sm px-6 py-2 rounded-full flex items-center gap-2 hover:bg-secondary-fixed transition-colors">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                        Sve
+                    </button>
+<button class="bg-surface-container-low text-on-surface-variant font-label text-sm px-6 py-2 rounded-full hover:bg-surface-container-highest transition-colors border border-outline-variant/15">
+                        Grašak
+                    </button>
+<button class="bg-surface-container-low text-on-surface-variant font-label text-sm px-6 py-2 rounded-full hover:bg-surface-container-highest transition-colors border border-outline-variant/15">
+                        Boranija
+                    </button>
+<button class="bg-surface-container-low text-on-surface-variant font-label text-sm px-6 py-2 rounded-full hover:bg-surface-container-highest transition-colors border border-outline-variant/15">
+                        Mešavine
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[400px]">
+<!-- Product Card 1 (Large) -->
+<div class="col-span-1 md:col-span-2 row-span-2 group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(5,25,66,0.06)] flex flex-col justify-end p-8">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+<img alt="Premium Grašak" class="w-full h-full object-cover" data-alt="vibrant green frozen peas overflowing from a minimalist white ceramic bowl on a light blue background with scattered frost" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZdIOMEPTsiytskbraV5KAxWea0W0JRSUKFlfSxQa9c3BGuE17ifHC6v_cH1rdm1pUjBDswy20qFyUFTuDNJc040QqnT1A9Q6QEUb0OeJQz0UbxzXdfjv1O93YwNk6DCL65WKZcaQOKVH-v0m8S7HOnP9zKF87yzL1VddlsqH4ltXh0WozmtJEcZE-Sbq3jLRmmt4lDoX4loeuUNLrTc2TzzKou_lW30ZSfP1t6wBXVeqgGZ3W-7JojVsVnT_a0JwAOwysLUTfl_E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-primary-container/20 to-transparent"></div>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<p class="font-label text-sm text-surface-container-low uppercase tracking-widest mb-2">Premium</p>
+<h3 class="font-headline text-4xl font-bold text-on-primary mb-2">Slatki Grašak</h3>
+<p class="font-body text-surface-container-low max-w-md">Pažljivo bran u zoru, blanširan i smrznut u roku od 2 sata kako bi zadržao slatkoću i boju.</p>
+</div>
+<button class="bg-surface-container-lowest text-on-surface w-14 h-14 rounded-full flex items-center justify-center hover:bg-secondary hover:text-on-primary transition-colors shadow-lg">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(5,25,66,0.06)] flex flex-col justify-end p-6">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+<img alt="Žuta Boranija" class="w-full h-full object-cover" data-alt="close up of crisp frozen yellow wax beans arranged organically on a frosted glass surface soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs5Yj-NLlZG1X0mZ59RgbU2ceRjO875geC0Uq2K77-NG73gJXj7Ym5-bJByiMlXnStLlfK7Pep71I_62datgj06VlP6ZEVPzHL44D8FWYjV774WEX0GQ74YdN4IK5_UBk1KZ1lpmlA7A3yT1YweUTnnq-m6tZSNGOgCpBf0hCsGhwH5a4qL0U_BodN14u5q_8Pa3rU9p53glYYEGjaNFcA_Td36-ryzfA83gJz7C9hvaWhpuaHB4v7PH_ryVfhQxvGMJ1mJZqSwmU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-1">Žuta Boranija</h3>
+<p class="font-body text-sm text-surface-container-low">Sečena, klasa A</p>
+</div>
+<button class="bg-surface-container-lowest/20 backdrop-blur-md text-on-primary border border-outline-variant/30 w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(5,25,66,0.06)] flex flex-col justify-end p-6">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+<img alt="Zelena Boranija" class="w-full h-full object-cover" data-alt="pile of frozen green beans with ice crystals glistening under soft lighting on a cool grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWqcSLqaqcpXtMBOLuxSupKuExRKD8_ATWoU8V1he0xkr9Xbh-nMvzzo9CPHpk0MfKs9y7gV5QwkMxvCGto_maQyZdc-vRG-NX0byN3b3u8AO1YWni7JxCIf-rXdT9lHOgV0O09bjR0HUw7IF-FDtCuIO5uBmpwbJrlK1Cu17hCMgr7amQp3z1Y0J1dfTvSxqPdCkKH6PyDcgTgBOF6RhN-EJGYGS08nxwVnZL9F6YaJI4VuoNZQMqa-h02-YUBaSVgE4mg_QDxBw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-1">Zelena Boranija</h3>
+<p class="font-body text-sm text-surface-container-low">Cela, bez konca</p>
+</div>
+<button class="bg-surface-container-lowest/20 backdrop-blur-md text-on-primary border border-outline-variant/30 w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(5,25,66,0.06)] flex flex-col justify-end p-6">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+<img alt="Zlatna Mešavina" class="w-full h-full object-cover" data-alt="colorful mix of frozen corn peas and diced carrots scattered asymmetrically on a white marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhcrQE0-N7I80FBl0Qt1sJrm03ehXNfq82r93pCXuSdJFouzt8a1gE2IPNZdCC8QhobRESP2FQbezDD3CD0mREA3kOLmga1dDSeETtfUT94qzYFEOTkSDICeTvLUBjeb5ztU0AsSyUYh0DmrVwyzU2FHHOQ-wXimavXGU4IKYGJMmjEniYHbhZdpj5w6P0yqCySWCAuZEn5v2m7aiVWUtpT6JW6HEVbBka-lIvCFlln_7jAHV-tYlp5qlWqqafN4kuZW03-O-2Mhk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-1">Zlatna Mešavina</h3>
+<p class="font-body text-sm text-surface-container-low">Kukuruz, grašak, šargarepa</p>
+</div>
+<button class="bg-surface-container-lowest/20 backdrop-blur-md text-on-primary border border-outline-variant/30 w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Info CTA Section -->
+<section class="py-32 bg-surface-container-low relative overflow-hidden">
+<!-- Decorative elements -->
+<div class="absolute -right-32 -top-32 w-96 h-96 bg-primary-fixed-dim/30 rounded-full blur-3xl"></div>
+<div class="absolute -left-32 -bottom-32 w-96 h-96 bg-tertiary-fixed-dim/20 rounded-full blur-3xl"></div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-6">Za HORECA Sektor</h2>
+<p class="font-body text-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Nudimo specijalizovana pakovanja i rinfuzna rešenja za profesionalne kuhinje. Kontaktirajte nas za B2B ponudu i uzorke našeg asortimana.</p>
+<button class="bg-primary-container text-on-primary font-body font-medium text-lg px-10 py-4 rounded-xl hover:bg-secondary hover:text-on-primary transition-colors shadow-lg">
+                    Zatražite Ponudu
+                 </button>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="bg-slate-50 dark:bg-slate-950 text-blue-950 dark:text-blue-100 font-['Inter'] text-sm tracking-wide w-full mt-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<p class="text-lg font-bold text-blue-950 dark:text-blue-50 mb-4 opacity-80 hover:opacity-100 duration-200">The Cryogenic Editorial</p>
+<p class="text-slate-500 dark:text-slate-400">© 2024 The Cryogenic Editorial. Nature preserved at its peak.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Privatnost</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Uslovi korišćenja</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Dostava</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">FAQ</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="sr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kontakt - The Cryogenic Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#a7d555",
+                      "on-primary-fixed-variant": "#354570",
+                      "on-tertiary-fixed-variant": "#314e2a",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#6d8c63",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#dae2ff",
+                      "inverse-primary": "#b5c5f8",
+                      "outline": "#75777f",
+                      "outline-variant": "#c5c6d0",
+                      "inverse-surface": "#1e2f58",
+                      "on-surface": "#051942",
+                      "primary": "#000000",
+                      "secondary-fixed": "#c2f26e",
+                      "surface": "#faf8ff",
+                      "surface-container-low": "#f2f3ff",
+                      "on-primary-container": "#7283b1",
+                      "surface-bright": "#faf8ff",
+                      "primary-fixed-dim": "#b5c5f8",
+                      "on-surface-variant": "#45464e",
+                      "surface-tint": "#4d5d89",
+                      "tertiary": "#000000",
+                      "surface-container-highest": "#dae2ff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e2e7ff",
+                      "on-tertiary-fixed": "#062104",
+                      "on-primary": "#ffffff",
+                      "secondary": "#486800",
+                      "on-secondary-container": "#4b6d00",
+                      "surface-container": "#eaedff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#caecbc",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#bfef6b",
+                      "surface-dim": "#ced9ff",
+                      "inverse-on-surface": "#eef0ff",
+                      "on-primary-fixed": "#051942",
+                      "background": "#faf8ff",
+                      "surface-variant": "#dae2ff",
+                      "tertiary-container": "#062104",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#354e00",
+                      "tertiary-fixed-dim": "#aed0a1",
+                      "primary-container": "#051942",
+                      "on-secondary-fixed": "#131f00",
+                      "on-background": "#051942",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "Inter"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-slate-900/60 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(5,25,66,0.04)] font-['Plus_Jakarta_Sans'] font-medium tracking-tight text-sm text-blue-950 dark:text-blue-50 transition-colors duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-blue-950 dark:text-white uppercase">
+                The Cryogenic Editorial
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">O nama</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">Zamrznuto voće</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">Zamrznuto povrće</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">Rinfuzno voće i povrće</a>
+<a class="text-blue-900 dark:text-blue-200 font-bold border-b-2 border-blue-900 dark:border-blue-400 pb-1 hover:bg-white/20 dark:hover:bg-white/5 transition-all duration-300 px-2 rounded" href="#">Kontakt</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="scale-95 active:scale-90 transition-transform text-slate-600 hover:text-blue-900">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform text-slate-600 hover:text-blue-900">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24">
+<div class="max-w-screen-xl mx-auto px-6 md:px-12">
+<!-- Hero Header -->
+<div class="mb-16 md:mb-24 text-center">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-[-0.02em] text-on-background mb-6">Stupite u kontakt</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">Tu smo da odgovorimo na sva vaša pitanja i osiguramo da dobijete samo najkvalitetnije proizvode, očuvane u svom vrhuncu.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+<!-- Contact Form (Frosted Glass) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-8 md:p-12 rounded-xl shadow-[0_20px_40px_rgba(5,25,66,0.06)] relative overflow-hidden group">
+<!-- Subtle Background Accents -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-fixed-dim/20 rounded-full blur-3xl group-hover:bg-primary-fixed-dim/30 transition-all duration-700"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-secondary-fixed-dim/10 rounded-full blur-3xl group-hover:bg-secondary-fixed-dim/20 transition-all duration-700"></div>
+<h2 class="font-headline text-3xl font-bold text-on-background mb-8 relative z-10">Pošaljite nam poruku</h2>
+<form class="space-y-6 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label text-sm text-on-surface-variant mb-2">Ime i prezime</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:bg-surface-container-highest rounded-lg px-4 py-3 text-on-surface transition-all duration-300 outline-none" placeholder="Unesite vaše ime" type="text"/>
+</div>
+<div>
+<label class="block font-label text-sm text-on-surface-variant mb-2">Email adresa</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:bg-surface-container-highest rounded-lg px-4 py-3 text-on-surface transition-all duration-300 outline-none" placeholder="vas@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label text-sm text-on-surface-variant mb-2">Naslov poruke</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:bg-surface-container-highest rounded-lg px-4 py-3 text-on-surface transition-all duration-300 outline-none" placeholder="Tema vaše poruke" type="text"/>
+</div>
+<div>
+<label class="block font-label text-sm text-on-surface-variant mb-2">Poruka</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:bg-surface-container-highest rounded-lg px-4 py-3 text-on-surface transition-all duration-300 outline-none resize-none" placeholder="Kako vam možemo pomoći?" rows="5"></textarea>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-secondary hover:text-on-secondary transition-colors duration-300 font-label font-medium px-8 py-4 rounded-xl w-full md:w-auto shadow-sm inline-flex items-center justify-center gap-2" type="submit">
+                                Pošalji poruku
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Contact Info & Map -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Info Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/15 flex items-start gap-4">
+<div class="bg-primary-fixed w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed-variant">location_on</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-background mb-1">Naša adresa</h3>
+<p class="font-body text-sm text-on-surface-variant">Ledena Ulica 15,<br/>11000 Beograd, Srbija</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/15 flex items-start gap-4">
+<div class="bg-secondary-fixed-dim w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">call</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-background mb-1">Telefon</h3>
+<p class="font-body text-sm text-on-surface-variant">+381 11 123 4567<br/><span class="text-xs text-on-surface-variant/70">Pon-Pet, 08:00 - 16:00</span></p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/15 flex items-start gap-4">
+<div class="bg-primary-fixed w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed-variant">mail</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-background mb-1">Email</h3>
+<p class="font-body text-sm text-on-surface-variant">info@cryoeditorial.rs</p>
+</div>
+</div>
+</div>
+<!-- Map Image Area -->
+<div class="flex-grow min-h-[300px] rounded-xl overflow-hidden relative group border border-outline-variant/15 bg-surface-container-highest">
+<img alt="Map Location" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="minimalist clean map visualization with soft blue tones and a distinct pin marker" data-location="Belgrade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGoWluKyfWkP3VSzumZhr2SjkvLx8me3E-Wgq2ng4ZLeFsWlcgrYtYO6S5wJi5F_otAUBSh3PmT7uUfvFxXX8iEmfka7k7ZxEfGXFqDKHmC2KW_bA1azDdttnjPe_J6u9xWSKN_lDXLE8rAath-Y8z_zP3e2heaZAP4jkMyB2EStwcR8zPWQiFZeVGRPopDm73KlC97Su0AVOYLZxBpOQkCD56w0P5UMgPeDdIf_gQtCs8alvh5V0qF94Gm-aJ_Z0dNZPLTq5bNdE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-auto bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm tracking-wide text-blue-950 dark:text-blue-100 border-t-0 shadow-none transition-colors duration-300">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="text-lg font-bold text-blue-950 dark:text-blue-50 mb-4 font-['Plus_Jakarta_Sans']">
+                    The Cryogenic Editorial
+                </div>
+<p class="text-slate-500 dark:text-slate-400 mb-6 max-w-sm">
+                    © 2024 The Cryogenic Editorial. Nature preserved at its peak.
+                </p>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Privatnost</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Uslovi korišćenja</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Dostava</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-400 transition-colors opacity-80 hover:opacity-100 duration-200" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+</body></html>
