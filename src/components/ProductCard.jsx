@@ -1,4 +1,17 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1]
+    }
+  }
+};
 
 const ProductCard = ({ 
   title, 
@@ -7,7 +20,10 @@ const ProductCard = ({
   category = "Premium Selection"
 }) => {
   return (
-    <div className="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] transition-all duration-500 cursor-pointer">
+    <motion.div 
+      variants={cardVariants}
+      className="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] transition-all duration-500 cursor-pointer"
+    >
       {/* Image Container */}
       <div className="aspect-[4/5] overflow-hidden bg-surface-container-low relative">
         <img 
@@ -34,7 +50,7 @@ const ProductCard = ({
       <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
         <span className="material-symbols-outlined text-white text-sm">ac_unit</span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
