@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProductCard from '../components/ProductCard';
+import { useLanguage } from '../context/LanguageContext';
 
 const Rinfuz = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex-grow">
       {/* Hero Section */}
@@ -10,20 +13,26 @@ const Rinfuz = () => {
         <div className="absolute inset-0 w-full h-full">
           <img 
             alt="Rinfuzno voće i povrće background" 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover grayscale-[15%] brightness-90" 
             src="/assets/rinfuz-hero.png" 
           />
+          {/* Very Thin Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         <div className="absolute inset-0 flex items-center justify-center p-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-surface-container-lowest/40 backdrop-blur-xl p-8 md:p-10 rounded-xl text-center max-w-lg w-full border border-outline-variant/15 shadow-[0_20px_40px_rgba(5,25,66,0.06)]"
+            className="text-center max-w-2xl w-full"
           >
-            <p className="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant mb-3">Katalog proizvoda</p>
-            <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight leading-tight mb-4">Rinfuzna Pakovanja</h1>
-            <p className="font-body text-sm md:text-base text-on-surface-variant max-w-md mx-auto">Premium zamrznuti proizvodi u pakovanjima prilagođenim zahtevima profesionalnih kuhinja i industrijske proizvodnje.</p>
+            <p className="font-label text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/80 mb-4 drop-shadow-md">{t('products.catalog')}</p>
+            <h1 className="font-headline text-4xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6 drop-shadow-xl">
+              {t('products.bulkTitle')}
+            </h1>
+            <p className="font-body text-base md:text-lg text-white/90 max-w-md mx-auto leading-relaxed drop-shadow-md font-medium">
+              {t('products.bulkDesc')}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -47,19 +56,19 @@ const Rinfuz = () => {
             title="Malina Rinfuz" 
             image="/assets/PLODOVI BACKE MALINA JPEG 1.jpeg"
             weight="10kg / 13kg"
-            category="Industrijsko Pakovanje"
+            category={t('products.categoryBulk')}
           />
           <ProductCard 
             title="Grašak Rinfuz" 
             image="/assets/PLODOVI BACKE GRASAK JPEG.jpeg"
             weight="20kg"
-            category="Industrijsko Pakovanje"
+            category={t('products.categoryBulk')}
           />
           <ProductCard 
             title="Mešavina Carska" 
             image="/assets/PLODOVI BACKE CARSKA MESAVINA JPEG.jpeg"
             weight="10kg / 20kg"
-            category="Industrijsko Pakovanje"
+            category={t('products.categoryBulk')}
           />
         </motion.div>
       </section>

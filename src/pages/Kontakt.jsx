@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const Kontakt = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex-grow pt-24 pb-24">
       <div className="max-w-screen-xl mx-auto px-6 md:px-12">
@@ -12,7 +15,7 @@ const Kontakt = () => {
             animate={{ opacity: 1, y: 0 }}
             className="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-4"
           >
-            Stupite u kontakt
+            {t('contact.title')}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -20,7 +23,7 @@ const Kontakt = () => {
             transition={{ delay: 0.1 }}
             className="font-body text-base text-on-surface-variant max-w-xl mx-auto"
           >
-            Tu smo da odgovorimo na sva vaša pitanja i osiguramo da dobijete samo najkvalitetnije proizvode, očuvane u svom vrhuncu.
+            {t('contact.desc')}
           </motion.p>
         </div>
 
@@ -34,24 +37,24 @@ const Kontakt = () => {
           >
             <div className="bg-surface-container-lowest/60 backdrop-blur-xl p-8 rounded-xl border border-outline-variant/15 shadow-[0_20px_40px_rgba(5,25,66,0.06)] relative overflow-hidden group">
               <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary-fixed-dim/10 rounded-full blur-3xl transition-all duration-700"></div>
-              <h2 className="font-headline text-2xl font-bold text-on-surface mb-6 relative z-10">Pošaljite nam poruku</h2>
+              <h2 className="font-headline text-2xl font-bold text-on-surface mb-6 relative z-10">{t('contact.formTitle')}</h2>
               <form className="space-y-4 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Ime i prezime</label>
-                    <input className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm text-on-surface outline-none focus:ring-1 focus:ring-on-surface/10 transition-all" placeholder="Vaše ime" type="text" />
+                    <label className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">{t('contact.name')}</label>
+                    <input className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm text-on-surface outline-none focus:ring-1 focus:ring-on-surface/10 transition-all" placeholder={t('contact.namePlaceholder')} type="text" />
                   </div>
                   <div>
-                    <label className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Email adresa</label>
-                    <input className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm text-on-surface outline-none focus:ring-1 focus:ring-on-surface/10 transition-all" placeholder="vas@email.com" type="email" />
+                    <label className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">{t('contact.email')}</label>
+                    <input className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm text-on-surface outline-none focus:ring-1 focus:ring-on-surface/10 transition-all" placeholder={t('contact.emailPlaceholder')} type="email" />
                   </div>
                 </div>
                 <div>
-                  <label className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Poruka</label>
-                  <textarea className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm text-on-surface outline-none focus:ring-1 focus:ring-on-surface/10 transition-all h-32 resize-none" placeholder="Kako vam možemo pomoći?"></textarea>
+                  <label className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">{t('contact.message')}</label>
+                  <textarea className="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm text-on-surface outline-none focus:ring-1 focus:ring-on-surface/10 transition-all h-32 resize-none" placeholder={t('contact.messagePlaceholder')}></textarea>
                 </div>
                 <button className="bg-on-surface text-surface px-8 py-3 rounded-xl font-label text-sm font-bold hover:bg-secondary hover:text-on-primary transition-all duration-300 shadow-sm flex items-center justify-center gap-2">
-                  Pošalji poruku
+                  {t('contact.send')}
                   <span className="material-symbols-outlined text-sm">send</span>
                 </button>
               </form>
@@ -66,9 +69,9 @@ const Kontakt = () => {
             className="lg:col-span-5 flex flex-col gap-6"
           >
             {[
-              { icon: 'location_on', title: 'Naša adresa', content: 'Ulica 15, 21400 Bačka Palanka' },
-              { icon: 'call', title: 'Telefon', content: '+381 11 123 4567', sub: 'Pon-Pet, 08:00 - 16:00' },
-              { icon: 'mail', title: 'Email', content: 'info@plodovibacke.rs' }
+              { icon: 'location_on', title: t('contact.addressTitle'), content: t('contact.address') },
+              { icon: 'call', title: t('contact.phoneTitle'), content: '+381 11 123 4567', sub: t('contact.phoneSub') },
+              { icon: 'mail', title: t('contact.emailTitle'), content: 'info@plodovibacke.rs' }
             ].map((info) => (
               <div key={info.title} className="bg-surface-container-low/50 p-5 rounded-xl border border-outline-variant/15 flex items-start gap-4 hover:bg-surface-container-low transition-colors duration-300">
                 <div className="bg-on-surface/5 w-10 h-10 rounded-full flex items-center justify-center shrink-0">

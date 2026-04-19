@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const Features = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-16 md:py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -14,13 +17,13 @@ const Features = () => {
           className="col-span-1 md:col-span-5 flex flex-col justify-center text-center md:text-left"
         >
           <h2 className="font-headline text-3xl md:text-5xl font-bold text-on-background tracking-tight mb-6">
-            O nama: Filozofija svežine
+            {t('features.title')}
           </h2>
           <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed mb-8">
-            The Cryogenic Editorial redefiniše standarde zamrznute hrane. Verujemo da hladnoća nije samo metod čuvanja, već način da se zaključa esencija prirode. Bez kompromisa, bez aditiva—samo čista, netaknuta materija.
+            {t('features.description')}
           </p>
           <ul className="space-y-4 font-body text-on-background text-sm md:text-base text-left mx-auto md:mx-0 inline-block">
-            {['Branje u optimalnom trenutku zrelosti', 'Šok smrzavanje za očuvanje ćelijske strukture', 'Premium selekcija za profesionalce i entuzijaste'].map((item, idx) => (
+            {t('features.points').map((item, idx) => (
               <li key={idx} className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
                 {item}
@@ -51,8 +54,8 @@ const Features = () => {
             className="absolute bottom-0 left-0 w-[70%] md:w-1/2 h-fit bg-surface-container-highest/90 rounded-xl p-6 md:p-8 shadow-[0_20px_40px_rgba(5,25,66,0.06)] flex flex-col justify-end backdrop-blur-sm border border-outline-variant/15"
           >
             <span className="material-symbols-outlined text-3xl md:text-4xl text-primary-container mb-4">ac_unit</span>
-            <h3 className="font-headline text-xl md:text-2xl font-bold text-on-background mb-2">Netaknuto vreme</h3>
-            <p className="font-body text-xs md:text-sm text-on-surface-variant">Naš proces zaustavlja biološki sat tačno na vrhuncu nutritivne vrednosti.</p>
+            <h3 className="font-headline text-xl md:text-2xl font-bold text-on-background mb-2">{t('features.sideTitle')}</h3>
+            <p className="font-body text-xs md:text-sm text-on-surface-variant">{t('features.sideDesc')}</p>
           </motion.div>
         </div>
       </div>

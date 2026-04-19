@@ -1,30 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const Trust = () => {
+  const { t } = useLanguage();
+
   const logistics = [
     {
       icon: 'route',
-      title: 'Optimizovane Rute',
-      description: 'Koristimo napredne sisteme za praćenje i optimizaciju ruta kako bismo osigurali najbržu isporuku uz minimalno izlaganje temperaturnim promenama.'
+      title: t('trust.routes'),
+      description: t('trust.routesDesc')
     },
     {
       icon: 'thermostat',
-      title: 'Stroga Temperaturna Kontrola',
-      description: 'Sva vozila su opremljena savremenim sistemima za kontinuirano praćenje temperature. Garantujemo održavanje -18°C od našeg do vašeg magacina.'
+      title: t('trust.temp'),
+      description: t('trust.tempDesc')
     },
     {
       icon: 'forklift',
-      title: 'Prilagođen Utovar i Istovar',
-      description: 'Pakujemo i paletizujemo robu prema specifičnim zahtevima vašeg sistema manipulacije teretom, osiguravajući efikasan i siguran prijem.'
+      title: t('trust.load'),
+      description: t('trust.loadDesc')
     }
-  ];
-
-  const certificates = [
-    { icon: 'verified_user', name: 'HACCP Certified' },
-    { icon: 'fact_check', name: 'IFS Standard' },
-    { icon: 'high_quality', name: 'BRC Global' },
-    { icon: 'eco', name: 'Global GAP' }
   ];
 
   return (
@@ -39,7 +35,7 @@ const Trust = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-headline font-bold text-on-background tracking-tight"
             >
-              Pouzdana Logistika Hladnog Lanca
+              {t('trust.logisticsTitle')}
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +44,7 @@ const Trust = () => {
               transition={{ delay: 0.1 }}
               className="text-base md:text-lg text-on-surface-variant leading-relaxed font-body"
             >
-              Razumemo važnost neprekidnog hladnog lanca u prehrambenoj industriji. Naš logistički sistem je dizajniran da osigura da vaša narudžbina stigne u savršenom stanju.
+              {t('trust.logisticsDesc')}
             </motion.p>
           </div>
           
@@ -76,18 +72,29 @@ const Trust = () => {
       </section>
 
       {/* Certifications Row */}
-      <section className="py-16 border-t border-outline-variant/10 bg-surface">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {certificates.map((cert, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-3 group">
-                <span className="material-symbols-outlined text-5xl text-on-surface group-hover:text-primary transition-colors duration-300">{cert.icon}</span>
-                <span className="font-bold text-[10px] md:text-xs tracking-widest uppercase text-on-surface-variant font-headline">
-                  {cert.name}
-                </span>
+      <section className="py-20 border-t border-outline-variant/10 bg-surface">
+        <div className="max-w-screen-2xl mx-auto px-8 flex flex-col items-center gap-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center text-center gap-4"
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-primary/5 rounded-full blur-2xl animate-pulse" />
+              <div className="relative w-24 h-24 rounded-full border-2 border-primary/20 flex items-center justify-center bg-white shadow-xl shadow-primary/10">
+                <span className="material-symbols-outlined text-5xl text-primary font-light">verified_user</span>
               </div>
-            ))}
-          </div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-headline font-black text-2xl md:text-3xl tracking-tight text-on-surface uppercase">
+                {t('trust.haccp')}
+              </span>
+              <p className="text-on-surface-variant font-medium text-sm md:text-base max-w-sm">
+                {t('trust.haccpDesc')}
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
